@@ -43,7 +43,7 @@ RUN git clone --branch 0.4.0 --depth 1 https://github.com/wiomoc/mosquitto-jwt-a
 # ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 # Stage 2: Final Image (only binaries and configs)
 # ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-FROM debian:bullseye-slim
+FROM debian:bookworm-slim
 
 ARG JWT_SECRET
 
