@@ -1,7 +1,7 @@
 # ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 # Stage 1: Compile Mosquitto and the Plugin
 # ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-FROM debian:bullseye-slim AS builder
+FROM debian:bookworm-slim AS builder
 
 ENV MOSQUITTO_VERSION=2.0.18
 ENV RUST_VERSION=1.85
@@ -50,7 +50,7 @@ ARG JWT_SECRET
 RUN apt-get update && apt-get install -y \
     libssl-dev \
     libc-ares2 \
-    libwebsockets16 \
+    libwebsockets17 \
     libcjson1 \
     && rm -rf /var/lib/apt/lists/*
 
